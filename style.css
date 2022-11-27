@@ -19,11 +19,14 @@ body {
   align-items: center; /* выровнять по линии главного элемента*/
   justify-content: space-around; /* распределить в пространстве эелементы*/
 }
+.container {
+  margin: 0px 166px;
+}
 .nav-item {
-  color: rgb(132, 33, 33);
+  color: rgb(98, 82, 5);
   text-decoration: none; /*убрать подчеркивание ссылки*/
   font-weight: 700; /*работа со шрифтом*/
-  font-size: 14px; /*работа со шрифтом*/
+  font-size: 22px; /*работа со шрифтом*/
   margin-right: 25px; /* отодвинули элементы друг от друга*/
 
   transition: color 0.3s linear; /*продолжительность действия при наведении мыши, плавность изменения цвета*/
@@ -85,12 +88,12 @@ body {
 .main-text {
   color: #cf1d64;
   font-family: "Tinos", serif;
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 400;
   text-align: center;
   position: absolute;
   left: 0;
-  margin-top: 120px;
+  margin-top: 80px;
   margin-bottom: 12px;
 }
 
@@ -132,4 +135,119 @@ body {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
   transition: background-color 0.3s linear;
+}
+.cards-holder {
+  display: flex; /*расположить в строку*/
+  justify-content: space-between;
+}
+
+.card {
+  width: 300px;
+  box-shadow: 10px 10px 10px 10px #4d044d6a;
+  margin-right: 31px;
+  margin-left: 31px;
+  background-color: rgba(253, 134, 253, 0.201);
+  margin-top: 30px;
+  padding: 10px 10px;
+}
+
+.card-image {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-family: "Tinos", serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.card-title span {
+  color: #d67e35;
+  margin-left: 2px;
+}
+
+.card-desc {
+  text-align: center;
+  font-family: "Tinos", serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #656363;
+}
+
+.info {
+  margin-top: 150px;
+}
+
+.info-title {
+  font-family: "Tinos", serif;
+  font-size: 54px;
+  font-weight: 400;
+  width: 450px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.info-title span {
+  color: #5e0e90;
+}
+
+.info-text {
+  color: #656363;
+  font-size: 16px;
+  width: 450px;
+  text-align: center;
+}
+
+.info-numbers {
+  display: flex; /*надо в строчку*/
+  width: 450px;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.items {
+  margin-right: 60px;
+  text-align: center;
+  font-size: 40px;
+  color: #6e0883;
+}
+
+.items span {
+  display: block;
+  color: #000;
+}
+
+.info-img {
+  position: relative;
+}
+
+.info-block {
+  display: flex;
+}
+
+.imgages-1 {
+  position: absolute;
+  z-index: 0;
+  top: 30px;
+  left: 180px;
+}
+
+.imgages-2 {
+  position: absolute;
+  z-index: 999;
+  top: -92px;
+  left: 383px;
+}
+
+.imgages-3 {
+  position: absolute;
+  z-index: 999;
+  top: 220px;
+  left: 460px;
 }

@@ -1,4 +1,4 @@
-/* избавить от рамок браузера по умолчанию */
+/* избавиться от рамок браузера по умолчанию */
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -41,13 +41,11 @@ body {
   padding-right: 10px;
   height: 50px;
 }
-
 .location-img {
   position: absolute;
   top: 18px; /* от родителя cart */
   right: 7px;
 }
-
 .num {
   color: rgb(128, 39, 39);
   text-decoration: none; /*нижнее подчеркивание убираем*/
@@ -73,18 +71,15 @@ body {
   text-decoration: none;
   padding: 14px 18px;
   font-weight: 700;
-
   transition: background-color 0.2s linear;
 }
 /*действия при наведении мыши*/
 .button:hover {
   background-color: #81297bfc;
 }
-
 .main {
   position: relative; /*стал родителем для класса хедер тайтл*/
 }
-
 .main-text {
   color: #cf1d64;
   font-family: "Tinos", serif;
@@ -96,13 +91,11 @@ body {
   margin-top: 80px;
   margin-bottom: 12px;
 }
-
 .extra-text {
   color: rgb(154, 37, 37);
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
 }
-
 /*псевдо классы полоски*/
 .extra-text:after {
   position: absolute;
@@ -113,7 +106,6 @@ body {
   top: 127px;
   left: 300px;
 }
-
 .extra-text:before {
   position: absolute;
   content: "";
@@ -140,7 +132,6 @@ body {
   display: flex; /*расположить в строку*/
   justify-content: space-between;
 }
-
 .card {
   width: 300px;
   box-shadow: 10px 10px 10px 10px #4d044d6a;
@@ -150,13 +141,11 @@ body {
   margin-top: 30px;
   padding: 10px 10px;
 }
-
 .card-image {
   display: flex;
   justify-content: center;
   padding-top: 20px;
 }
-
 .card-title {
   display: flex;
   justify-content: center;
@@ -165,12 +154,10 @@ body {
   font-size: 26px;
   font-weight: 400;
 }
-
 .card-title span {
   color: #d67e35;
   margin-left: 2px;
 }
-
 .card-desc {
   text-align: center;
   font-family: "Tinos", serif;
@@ -178,31 +165,27 @@ body {
   font-weight: 400;
   color: #656363;
 }
-
 .info {
-  margin-top: 150px;
+  margin-top: 60px;
+  padding-bottom: 200px;
 }
-
 .info-title {
   font-family: "Tinos", serif;
   font-size: 54px;
   font-weight: 400;
   width: 450px;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
-
 .info-title span {
   color: #5e0e90;
 }
-
 .info-text {
   color: #656363;
   font-size: 16px;
   width: 450px;
   text-align: center;
 }
-
 .info-numbers {
   display: flex; /*надо в строчку*/
   width: 450px;
@@ -210,44 +193,83 @@ body {
   margin-top: 40px;
   margin-left: 40px;
 }
-
 .items {
   margin-right: 60px;
   text-align: center;
   font-size: 40px;
   color: #6e0883;
 }
-
 .items span {
   display: block;
   color: #000;
 }
-
 .info-img {
   position: relative;
 }
-
 .info-block {
   display: flex;
 }
-
 .imgages-1 {
   position: absolute;
   z-index: 0;
   top: 30px;
   left: 180px;
 }
-
 .imgages-2 {
   position: absolute;
   z-index: 999;
   top: -92px;
   left: 383px;
 }
-
 .imgages-3 {
   position: absolute;
   z-index: 999;
   top: 220px;
   left: 460px;
+}
+.promotion {
+  background-image: url(bg-2.jpg);
+  padding: 160px 40px;
+}
+.left-title {
+  color: #d67e34;
+  font-family: "Tinos", serif;
+  font-size: 52px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.left-text {
+  font-weight: 700;
+  font-size: 24px;
+  color: rgb(129, 20, 150);
+}
+.right-btn {
+  background-color: #f027c1c4;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 18px;
+  font-weight: 700;
+}
+.promotion-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.clothes-title {
+  font-family: "Tinos", serif;
+  font-size: 54px;
+  font-weight: 400;
+  text-align: center;
+  padding-top: 132px;
+  margin-bottom: 139px;
+}
+.clothes-title span {
+  color: #8f106b;
+}
+.dress {
+  display: flex;
+  justify-content: center;
+}
+.dress-img {
+  margin-right: 20px;
 }

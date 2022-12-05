@@ -3,12 +3,12 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
-.navigation {
+.container {
   margin: 0px 166px;
 }
 /*  100 vh на всю высоту, но репит - не повторять, растянуть -ковер*/
 .main_menu {
-  background-image: url(/img/bg.jpg);
+  background-image: url(/img/bg1.png);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,7 +43,7 @@ body {
 }
 .location-img {
   position: absolute;
-  top: 18px; /* от родителя cart */
+  top: 18px; /* от родителя location */
   right: 7px;
 }
 .num {
@@ -77,9 +77,11 @@ body {
 .button:hover {
   background-color: #81297bfc;
 }
-.main {
+
+.header-down {
   position: relative; /*стал родителем для класса хедер тайтл*/
 }
+
 .main-text {
   color: #cf1d64;
   font-family: "Tinos", serif;
@@ -252,7 +254,7 @@ body {
   font-weight: 700;
 }
 .promotion-block {
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
 }
@@ -267,14 +269,44 @@ body {
 .clothes-title span {
   color: #8f106b;
 }
-.dress {
+.portfolio {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 5px;
 }
 .dress-img {
   display: flex;
   margin-right: 5px;
+}
+.galery-title {
+  font-family: "Tinos", serif;
+  font-size: 54px;
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 60px;
+}
+
+.galery-title span {
+  color: #d67e34;
+}
+
+.galery-content {
+  display: flex;
+  justify-content: center;
+}
+
+.galery-left {
+  margin-right: 20px;
+}
+
+.galery-down,
+.galery-up {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.burger-menu {
+  display: none;
 }
 
 .footer {
@@ -284,4 +316,121 @@ body {
   font-size: 24px;
   color: rgb(75, 6, 55);
   text-align: center;
+}
+
+@media (max-width: 1500px) {
+  .galery-content {
+    display: block;
+  }
+
+  .img-gal,
+  .galery-up,
+  .galery-down {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img-gal {
+    margin-bottom: 20px;
+  }
+
+  .galery-left {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .menu-items {
+    display: block;
+  }
+
+  .menu-item {
+    margin: 20px auto;
+    width: 600px;
+  }
+
+  .main-text {
+    position: static;
+  }
+
+  .extra-text:before,
+  .extra-text:after {
+    content: none;
+  }
+
+  .promotion-block {
+    display: block;
+  }
+
+  .left-title,
+  .left-text,
+  .right-button {
+    text-align: center;
+  }
+
+  .right-button {
+    margin-top: 40px;
+  }
+
+  .info-img {
+    display: none;
+  }
+
+  .info-title,
+  .info-text,
+  .info-numbers {
+    width: auto;
+  }
+}
+
+@media (max-width: 1185px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .nav,
+  .location,
+  .phone,
+  .btn {
+    display: none;
+  }
+
+  .navigation-block {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cards-holder {
+    display: block;
+  }
+
+  .card {
+    width: 100%;
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 780px) {
+  .info-block {
+    display: block;
+  }
+
+  .menu-item {
+    width: auto;
+  }
+
+  .high {
+    display: none;
+  }
+
+  .container {
+    margin: auto 40px;
+  }
+
+  .number-item {
+    font-size: 23px;
+  }
 }

@@ -16,7 +16,7 @@
     <title>АТЕЛЬЕ</title>
   </head>
   <body>
-    <!-- первая часть -->
+    <!-- Главное меню -->
     <div class="main_menu">
       <!-- меню -->
       <div class="navigation">
@@ -27,10 +27,10 @@
           </div>
           <!-- навигация -->
           <div class="nav">
-            <a class="nav-item" href="@">ГЛАВНАЯ</a>
-            <a class="nav-item" href="@">ПРАЙС</a>
-            <a class="nav-item" href="@">О НАС</a>
-            <a class="nav-item" href="contact.html"> контакты</a>
+            <a class="nav-item" href="index.html">ГЛАВНАЯ</a>
+            <a class="nav-item" href="#order">ПРОЦЕСС ЗАКАЗА</a>
+            <a class="nav-item" href="#about">О НАС</a>
+            <a class="nav-item" href="contact.html">КОНТАКТЫ</a>
           </div>
           <!-- контакты  -->
           <div class="location">
@@ -38,7 +38,6 @@
               <img class="location-img" src="card.png" alt="location" />
             </a>
           </div>
-          <!-- контакты -->
           <div class="phone">
             <div class="phone-holder">
               <div class="phone-img">
@@ -46,7 +45,7 @@
               </div>
               <!--  #- чтобы на тел можно нажать -->
               <div class="number">
-                <a class="num" href="#">+999-888-77-66</a>
+                <a class="num" href="tel:+79998887766">+7 999-888-77-66</a>
               </div>
             </div>
             <div class="phone-text">
@@ -54,7 +53,7 @@
               расчета стоимости
             </div>
           </div>
-          <div class="btn">
+          <div class="btn zakaz">
             <a class="button" href="#">ЗАКАЗАТЬ ВЫЕЗД МАСТЕРА</a>
           </div>
         </div>
@@ -63,7 +62,7 @@
             Пошив одежды по индивидуальным меркам
             <div class="extra-text">по технологии bespoke</div>
             <div class="main-btn">
-              <a href="#" class="main-button">Примеры работ</a>
+              <a href="#portfolio" class="main-button">Примеры работ</a>
             </div>
           </div>
         </div>
@@ -73,58 +72,64 @@
     <div class="cards">
       <div class="main">
         <div class="cards-holder">
-          <!-- картинки карточки -->
           <div class="card">
             <div class="card-image">
               <img class="card-img" src="/img/main1.png" />
             </div>
-            <div class="card-title">Ручная работа <span>Качество</span></div>
-            <div class="card-desc">Высокок качество качесвто и все такое</div>
+            <div class="card-title"><span>Стиль, качество и комфорт </span>
+            </div>
+            <div class="card-desc">
+              Создадим точную копию любого предмета гардероба из нашего
+              ассортимента
+            </div>
           </div>
           <div class="card">
             <div class="card-image">
               <img class="card-img" src="/img/main2.png" />
             </div>
-            <div class="card-title">Лучшее качество <span>тканей</span></div>
-            <div class="card-desc">Качество материалов наивысше!</div>
+            <div class="card-title"><span>Широкий ассортимент</span></div>
+            <div class="card-desc">
+              Размерный ряд не ограничен привычным — мы шьем одежду на любой
+              размер.
+            </div>
           </div>
           <div class="card">
             <div class="card-image">
               <img class="card-img" src="img/main3.png" />
             </div>
-
-            <div class="card-title">Посадка идеальная <span>Точно</span></div>
-
-            <div class="card-desc">быстрый результат !</div>
+            <div class="card-title"><span>Эксклюзив</span></div>
+            <div class="card-desc">
+              Индивидуально разработанные лекала, учитывая все особенности
+              анатомии фигуры.
+            </div>
           </div>
           <div class="card">
             <div class="card-image">
               <img class="card-img" src="img/main4.png" />
             </div>
-            <div class="card-title">уют комфорт <span>Лекала</span></div>
-            <div class="card-desc">качество качество качество</div>
+            <div class="card-title"><span>Уникальность</span></div>
+            <div class="card-desc">
+              Мы не шьем двух одинаковых вещей, они не повторяют друг друга.
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- справочная информация +картинки  -->
-    <div class="info">
+    <div class="info" id="order">
       <div class="container">
         <div class="info-block">
           <div class="inform">
             <div class="info-title">
-              что используем <span>начало продолжение</span>
+              Процесс заказа </br> <span> Мы ценим Ваше время</span>
             </div>
             <div class="info-text">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Repellendus tempore culpa ea excepturi sequi alias soluta aliquid
-              laudantium dolorum. Nemo soluta, in necessitatibus dolorem
-              voluptatibus quaerat esse quidem iusto possimus?
+              Организуем встречу со стилистом в любом месте, удобном вам. Снимаем мерки сантиметровой лентой, подберем наиболее подходящий для вас вариант, чтобы получить безупречный результат.
             </div>
             <div class="info-number">
-              <div class="items">5<span>нитки</span></div>
-              <div class="items">6<span>иголки</span></div>
-              <div class="items">7<span>молнии</span></div>
+              <div class="items">1<span>Встреча</span></div>
+              <div class="items">4<span>Недели</span></div>
+              <div class="items">1<span>Примерка</span></div>
             </div>
           </div>
           <div class="info-img">
@@ -155,18 +160,30 @@
       </div>
     </div>
     <!-- примеры картинки -->
-    <div class="clothes">
-      <div class="container">
-        <div class="clothes-title">
-          Готовые <span>образы + вставить какие-то картинки 3 -4 в ряд </span>
+    <div class="clothes" >
+      <div class="container" >
+        <div class="clothes-title" id="about">
+          <h1>Процесс заказа и пошива</h1>
+          </br><span> 
+            Встреча - в любом удобном для вас месте. Вы выбираете ткани из образцов, стилист снимает мерки; вместе вы обсуждаете и продумываете фасон будущего изделия. </br>
+            Пошив - Мы отправляем ваш заказ, где мастера создают эксклюзивную вещь по вашим меркам и дизайну </br>
+            Примерка Полностью готовое изделие мы привозим вам. На первой примерке обсуждаем необходимость финальных доработок </br>
+            Доработка - Мы гарантируем идеальную посадку. Даже если ваша фигура незначительно изменилась, изделие будет скорректировано </br>
+            Гарантия - Если в течение года ваш размер изменился, наши портные бесплатно подгонят изделие </br>
+            </span>
         </div>
-        <div class="dress">
+        <div class="dress" id="portfolio">
           <div class="dress-img">
-            <img src="/img/77777AE 2.png" class="dress" />
+            <img src="/img/portfolio1.jpg" class="dress" />
+            <img src="/img/portfolio2.jpg" class="dress" />
+            <img src="/img/portfolio3.jpg" class="dress" />
           </div>
         </div>
       </div>
     </div>
-    <footer></footer>
+
+    <footer>
+      <div class="footer">©Все права защищены 2022</div>
+    </footer>
   </body>
 </html>

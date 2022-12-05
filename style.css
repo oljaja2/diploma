@@ -5,7 +5,7 @@ body {
 }
 /*  100 vh на всю высоту, но репит - не повторять, растянуть -ковер*/
 .main-menu {
-  background-image: url(/img/bg1.png);
+  background-image: url(/img/bg.png);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,7 +37,7 @@ body {
 .num {
   color: rgb(128, 39, 39);
   text-decoration: none; /*нижнее подчеркивание убираем*/
-  font-weight: 700; /*тодщина букв*/
+  font-weight: 700; /*толщина букв*/
   transition: color 0.3s linear;
 }
 /*действия при наведении мыши*/
@@ -241,7 +241,12 @@ body {
   text-decoration: none;
   padding: 14px 18px;
   font-weight: 700;
+  transition: background-color 0.3s linear;
 }
+.right-btn:hover {
+  background-color: #700d89;
+}
+
 .promotion-block {
   display: block;
   justify-content: space-between;
@@ -296,6 +301,25 @@ body {
 }
 .burger-menu {
   display: none;
+}
+#menu-burger ul {
+  display: block;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+.item {
+  color: rgb(98, 82, 5);
+  text-decoration: none; /*убрать подчеркивание ссылки*/
+  font-size: 22px; /*работа со шрифтом*/
+  margin-right: 5px; /* отодвинули элементы друг от друга*/
+  transition: color 0.3s linear; /*продолжительность действия при наведении мыши, плавность изменения цвета*/
+}
+/*действия при наведении мыши*/
+.item:hover {
+  color: #551dd8;
 }
 
 .footer {

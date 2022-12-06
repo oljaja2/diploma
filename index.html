@@ -17,8 +17,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <link rel="shortcut icon" href="/img/logo.png" />
     <title>АТЕЛЬЕ</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   </head>
   <body>
@@ -39,7 +40,7 @@
             <a class="nav-item" href="index.html">ГЛАВНАЯ</a>
             <a class="nav-item" href="#order">ПРОЦЕСС ЗАКАЗА</a>
             <a class="nav-item" href="#about">О НАС</a>
-            <a class="nav-item" href="contact.html">КОНТАКТЫ</a>
+            <a class="nav-item" hrephonf="contact.html">КОНТАКТЫ</a>
           </div>
           <!-- контакты  -->
           <div class="phone">
@@ -57,20 +58,20 @@
             </div>
           </div>
           <div class="btn">
-            <a class="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">ЗАКАЗАТЬ ВЫЕЗД МАСТЕРА</a>
+            <a class="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">ВЫЗВАТЬ МАСТЕРА</a>
           </div>
           <div class="burger-menu">
             <a href="#menu">
                 <img src="img/menu.png" alt="">
             </a>
-          <nav id="menu-burger">
-            <ul>
-              <li><a class="item" href="index.html">ГЛАВНАЯ</a></li>
-              <li><a class="item" href="#order">ПРОЦЕСС ЗАКАЗА</a></li>
-              <li><a class="item" href="#about">О НАС</a></li>
-              <li><a class="item" href="contact.html">КОНТАКТЫ</a></li>
-            </ul>
-          </nav>
+            <nav id="menu-burger">
+              <ul>
+                <li><a class="item" href="index.html">ГЛАВНАЯ</a></li>
+                <li><a class="item" href="#order">ПРОЦЕСС ЗАКАЗА</a></li>
+                <li><a class="item" href="#about">О НАС</a></li>
+                <li><a class="item" href="contact.html">КОНТАКТЫ</a></li>
+              </ul>
+            </nav>
           </div>
         </div>
         <div class="header-down">
@@ -107,46 +108,43 @@
     </div>
     <!--end modal-->
     <!-- карточки -->
-    <div class="cards">
+    <div class="pictures">
       <div class="main">
-        <div class="cards-holder">
-          <div class="card">
-            <div class="card-image">
-              <img class="card-img" src="/img/main1.png" />
+        <div class="picture-holder">
+          <div class="picture">
+            <div class="picture-image">
+              <img class="picture-img" src="/img/main1.png" />
             </div>
-            <div class="card-title"><span>Стиль, качество и комфорт </span>
-            </div>
-            <div class="card-desc">
-              Создадим точную копию любого предмета гардероба из нашего
-              ассортимента
+            <div class="picture-title"><span>Стиль и качество</span></div>
+            <div class="picture-desc">
+              Создадим точную копию любого предмета гардероба из нашего ассортимента
             </div>
           </div>
-          <div class="card">
-            <div class="card-image">
-              <img class="card-img" src="/img/main2.png" />
+          <div class="picture">
+            <div class="picture-image">
+              <img class="picture-img" src="/img/main2.png" />
             </div>
-            <div class="card-title"><span>Широкий ассортимент</span></div>
-            <div class="card-desc">
-              Размерный ряд не ограничен привычным — мы шьем одежду на любой
-              размер.
+            <div class="picture-title"><span>Широкий ассортимент</span></div>
+            <div class="picture-desc">
+              Размерный ряд не ограничен привычным — мы шьем одежду на любой размер.
             </div>
           </div>
-          <div class="card">
-            <div class="card-image">
-              <img class="card-img" src="img/main3.png" />
+          <div class="picture">
+            <div class="picture-image">
+              <img class="picture-img" src="img/main3.png" />
             </div>
-            <div class="card-title"><span>Эксклюзив</span></div>
-            <div class="card-desc">
+            <div class="picture-title"><span>Эксклюзив</span></div>
+            <div class="picture-desc">
               Индивидуально разработанные лекала, учитывая все особенности
               анатомии фигуры.
             </div>
           </div>
-          <div class="card">
-            <div class="card-image">
-              <img class="card-img" src="img/main4.png" />
+          <div class="picture">
+            <div class="picture-image">
+              <img class="picture-img" src="img/main4.png" />
             </div>
-            <div class="card-title"><span>Уникальность</span></div>
-            <div class="card-desc">
+            <div class="picture-title"><span>Уникальность</span></div>
+            <div class="picture-desc">
               Мы не шьем двух одинаковых вещей, они не повторяют друг друга.
             </div>
           </div>
@@ -215,9 +213,10 @@
         <div class="clothes-title" id="about">
           <h1>Процесс заказа и пошива</h1>
           </br><span> 
-            Встреча - в любом удобном для вас месте. Вы выбираете ткани из образцов, стилист снимает мерки; вместе вы обсуждаете и продумываете фасон будущего изделия. </br>
-            Пошив - Мы отправляем ваш заказ, где мастера создают эксклюзивную вещь по вашим меркам и дизайну </br>
-            Примерка Полностью готовое изделие мы привозим вам. На первой примерке обсуждаем необходимость финальных доработок </br>
+            Технология bespoke - это пошив одежды по индивидуально разработанным лекалам, которые строятся персонально под заказчика с нуля, учитывая все особенности анатомии его фигуры.</br>
+            Встреча - в любом удобном для вас месте. Вы выбираете ткани из образцов, снимаем мерки, обсуждаем и продумываем фасон будущего изделия. </br>
+            Пошив - Мы отправляем ваш заказ, где мастер создаст эксклюзивную вещь по вашим меркам и дизайну </br>
+            Примерка -  Полностью готовое изделие мы привозим вам. На первой примерке обсуждаем необходимость финальных доработок </br>
             Доработка - Мы гарантируем идеальную посадку. Даже если ваша фигура незначительно изменилась, изделие будет скорректировано </br>
             Гарантия - Если в течение года ваш размер изменился, наши портные бесплатно подгонят изделие </br>
             </span>

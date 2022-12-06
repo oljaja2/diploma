@@ -306,9 +306,9 @@
     // обработчик формы
       $('#my_form_email').submit(function () {
         $.post(
-          'post-email.php', // адрес обработчика
-          $("#my_form_email").serialize(), // отправляемые данные  		
-          function (msg) { // получен ответ сервера  
+          'post-email.php', 
+          $("#my_form_email").serialize(),  		
+          function (msg) {
             $('#my_form_email').hide('slow');
             $('#my_message_email').html('Спасибо, ваше обращение отправлено!');
           }

@@ -189,14 +189,14 @@
           <!-- таймер обратного отсчета -->
           <div class="timer">
             <h2> До конца акции осталось</h2>
-            <div class="timer__items">
-              <div class="timer__item timer__days" data-title="дней"></div>
-              <div class="timer__divider"></div>
-              <div class="timer__item timer__hours" data-title="часов"></div>
-              <div class="timer__divider"></div>
-              <div class="timer__item timer__minutes" data-title="минут"></div>
-              <div class="timer__divider"></div>
-              <div class="timer__item timer__seconds" data-title="секунд"></div>
+            <div class="timer_items">
+              <div class="timer_item timer_days" data-title="дней"></div>
+              <div class="timer_divider"></div>
+              <div class="timer_item timer_hours" data-title="часов"></div>
+              <div class="timer_divider"></div>
+              <div class="timer_item timer_minutes" data-title="минут"></div>
+              <div class="timer_divider"></div>
+              <div class="timer_item timer_seconds" data-title="секунд"></div>
             </div>
           </div>
           <!--конец таймера-->
@@ -258,24 +258,18 @@
     </footer>
     <script>
     // таймер
-    function changeTimezone(date, ianatz) {
-      let invdate = new Date(date.toLocaleString('en-US', {
-        timeZone: ianatz
-      }));
-      let diff = invdate.getTime() - date.getTime();
-      return new Date(date.getTime() - diff);
-    };
+  
     document.addEventListener('DOMContentLoaded', function () {
       // конечная дата
-      let x = new Date("2023-01-01T24:00:00");
-      // часовой пояс
-      let deadline = changeTimezone(x, "Europe/Moscow");
+      let deadline = new Date("2023-01-01T24:00:00");
       let timerId = null;
-      function declensionNum(num, words) {
+
+      function correctWord(num, words) {
         return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
       }
+
       // вычисляем разницу дат и устанавливаем оставшееся времени в качестве содержимого элементов
-      function countdownTimer() {
+      function timerLeft() {
         let diff = deadline - new Date();
         if (diff <= 0) {
           clearInterval(timerId);
@@ -288,19 +282,19 @@
         $hours.textContent = hours < 10 ? '0' + hours : hours;
         $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
         $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
-        $days.dataset.title = declensionNum(days, ['день', 'дня', 'дней']);
-        $hours.dataset.title = declensionNum(hours, ['час', 'часа', 'часов']);
-        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
-        $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+        $days.dataset.title = correctWord(days, ['день', 'дня', 'дней']);
+        $hours.dataset.title = correctWord(hours, ['час', 'часа', 'часов']);
+        $minutes.dataset.title = correctWord(minutes, ['минута', 'минуты', 'минут']);
+        $seconds.dataset.title = correctWord(seconds, ['секунда', 'секунды', 'секунд']);
       }
       // получаем элементы, содержащие компоненты даты
-      let $days = document.querySelector('.timer__days');
-      let $hours = document.querySelector('.timer__hours');
-      let $minutes = document.querySelector('.timer__minutes');
-      let $seconds = document.querySelector('.timer__seconds');
-      countdownTimer();
-      // вызываем функцию countdownTimer каждую секунду
-      timerId = setInterval(countdownTimer, 1000);
+      let $days = document.querySelector('.timer_days');
+      let $hours = document.querySelector('.timer_hours');
+      let $minutes = document.querySelector('.timer_minutes');
+      let $seconds = document.querySelector('.timer_seconds');
+      timerLeft();
+      // вызываем функцию timerLeft каждую секунду
+      timerId = setInterval(timerLeft, 1000);
     });
 
     // обработчик формы

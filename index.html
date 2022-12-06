@@ -13,7 +13,18 @@
       href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="/img/logo.png" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Бутсрап only css -->
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
     
     <title>АТЕЛЬЕ</title>
   </head>
@@ -48,7 +59,7 @@
             </div>
           </div>
           <div class="btn">
-            <a class="button" href="#">Вызвать мастера</a>
+            <a class="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">ЗАКАЗАТЬ ВЫЕЗД МАСТЕРА</a>
           </div>
           <div class="burger-menu">
             <a href="#menu">
@@ -75,6 +86,28 @@
         </div>
       </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Мы вам перезвоним</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="my_form_email">
+            <div class="input-group mb-3"><label>Имя: <input type="text" name="name" required></label></div>
+            <div class="input-group mb-3""><label>Телефон: <input type=" text" class="tel" name="tel" required></label></div>
+            <div class="input-group mb-3"><label>Email: <input type="email" name="email" required></label></div>
+            <div class="input-group mb-3"><button class="main-button" type="submit">Отправить</button></div>
+          </form>
+          <div id="my_message_email"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--end modal-->
     <!-- карточки -->
     <div class="cards">
       <div class="main">
@@ -153,8 +186,7 @@
         <div class="promotion-block">
           <div class="left">
             <div class="left-title">
-              Закажите выезд мастера <br />
-              бесплатно
+              Закажите выезд мастера бесплатно
             </div>
             <div class="left-text">Только до конца декабря</div>
           </div>
@@ -223,27 +255,25 @@
           </div>
       </div>
     </div>
+
     <footer>
       <div class="footer">©Все права защищены 2022</div>
     </footer>
     <script>
-          function changeTimezone(date, ianatz) {
+    // таймер
+    function changeTimezone(date, ianatz) {
       let invdate = new Date(date.toLocaleString('en-US', {
         timeZone: ianatz
       }));
       let diff = invdate.getTime() - date.getTime();
       return new Date(date.getTime() - diff);
     };
-
     document.addEventListener('DOMContentLoaded', function () {
       // конечная дата
       let x = new Date("2023-01-01T24:00:00");
       // часовой пояс
-      // https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
       let deadline = changeTimezone(x, "Europe/Moscow");
-      // id таймера
       let timerId = null;
-      // склонение числительных
       function declensionNum(num, words) {
         return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
       }
@@ -271,12 +301,23 @@
       let $hours = document.querySelector('.timer__hours');
       let $minutes = document.querySelector('.timer__minutes');
       let $seconds = document.querySelector('.timer__seconds');
-      // вызываем функцию countdownTimer
       countdownTimer();
       // вызываем функцию countdownTimer каждую секунду
       timerId = setInterval(countdownTimer, 1000);
     });
 
+    // обработчик формы
+      $('#my_form_email').submit(function () {
+        $.post(
+          'post-email.php', // адрес обработчика
+          $("#my_form_email").serialize(), // отправляемые данные  		
+          function (msg) { // получен ответ сервера  
+            $('#my_form_email').hide('slow');
+            $('#my_message_email').html('Спасибо, ваше обращение отправлено!');
+          }
+          );
+        return false;
+      });
     </script>
   </body>
 </html>

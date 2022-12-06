@@ -40,7 +40,7 @@
             <a class="nav-item" href="index.html">ГЛАВНАЯ</a>
             <a class="nav-item" href="#order">ПРОЦЕСС ЗАКАЗА</a>
             <a class="nav-item" href="#about">О НАС</a>
-            <a class="nav-item" hrephonf="contact.html">КОНТАКТЫ</a>
+            <a class="nav-item" href="contact.html">КОНТАКТЫ</a>
           </div>
           <!-- контакты  -->
           <div class="phone">
@@ -95,10 +95,10 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form id="my_form_email">
-            <div class="input-group mb-3"><label>Имя: <input type="text" name="name" required></label></div>
-            <div class="input-group mb-3""><label>Телефон: <input type=" text" class="tel" name="tel" required></label></div>
-            <div class="input-group mb-3"><label>Email: <input type="email" name="email" required></label></div>
+          <form action="post-email.php" id="my_form_email">
+            <div class="input-group mb-3"><label>Имя: <input type="text" name="name" required placeholder="Введите Имя"></label></div>
+            <div class="input-group mb-3""><label>Телефон: <input type=" text" class="tel" name="tel" required placeholder="Введите № телефона"></label></div>
+            <div class="input-group mb-3"><label>Email: <input type="email" name="email" required placeholder=" e-mail"></label></div>
             <div class="input-group mb-3"><button class="main-button" type="submit">Отправить</button></div>
           </form>
           <div id="my_message_email"></div>
@@ -110,7 +110,7 @@
     <!-- карточки -->
     <div class="pictures">
       <div class="main">
-        <div class="picture-holder">
+        <div class="pictures-holder">
           <div class="picture">
             <div class="picture-image">
               <img class="picture-img" src="/img/main1.png" />

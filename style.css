@@ -39,13 +39,14 @@ body {
   text-decoration: none; /*нижнее подчеркивание убираем*/
   font-weight: 700; /*толщина букв*/
   transition: color 0.3s linear;
+  font-size: 20px;
 }
 /*действия при наведении мыши*/
 .num:hover {
-  color: #c2d81d;
+  color: #081782;
 }
 .phone-text {
-  font-size: 14px;
+  font-size: 22px;
   font-weight: 400;
   color: rgb(99, 16, 16);
 }
@@ -54,7 +55,7 @@ body {
   align-items: center;
 }
 .button {
-  background-color: #bf54c3d3;
+  background-color: #6cc354d3;
   color: #fff;
   text-decoration: none;
   padding: 14px 18px;
@@ -82,46 +83,46 @@ body {
 }
 .extra-text {
   color: rgb(154, 37, 37);
-  font-size: 18px;
+  font-size: 30px;
   font-family: "Open Sans", sans-serif;
 }
 /*псевдо классы полоски*/
 .extra-text:after {
   position: absolute;
   content: "";
-  height: 2px;
-  width: 61px;
-  background-color: rgb(222, 26, 196);
-  top: 127px;
+  height: 4px;
+  width: 90px;
+  background-color: rgb(154, 37, 37);
+  top: 110px;
   left: 300px;
 }
 .extra-text:before {
   position: absolute;
   content: "";
-  height: 2px;
-  width: 61px;
-  background-color: rgb(222, 26, 196);
-  top: 127px;
-  left: 750px;
+  height: 4px;
+  width: 90px;
+  background-color: rgb(154, 37, 37);
+  top: 110px;
+  left: 860px;
 }
 .main-button:hover {
-  background-color: #700d89;
+  background-color: #6b0550;
 }
 .main-button {
   background-color: #c01ca7;
   padding: 14px 28px;
-  color: rgb(198, 252, 246);
-  font-size: 14px;
+  color: rgb(251, 254, 254);
+  font-size: 22px;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
   transition: background-color 0.3s linear;
 }
-.cards-holder {
+.pictures-holder {
   display: flex; /*расположить в строку*/
   justify-content: space-between;
 }
-.card {
+.picture {
   width: 300px;
   box-shadow: 10px 10px 10px 10px #4d044d6a;
   margin-right: 31px;
@@ -130,12 +131,12 @@ body {
   margin-top: 30px;
   padding: 10px 10px;
 }
-.card-image {
+.picture-image {
   display: flex;
   justify-content: center;
   padding-top: 20px;
 }
-.card-title {
+.picture-title {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
@@ -143,11 +144,11 @@ body {
   font-size: 26px;
   font-weight: 400;
 }
-.card-title span {
+.picture-title span {
   color: #d67e35;
   margin-left: 2px;
 }
-.card-desc {
+.picture-desc {
   text-align: center;
   font-family: "Tinos", serif;
   font-size: 26px;
@@ -303,12 +304,7 @@ body {
   display: none;
 }
 #menu-burger ul {
-  display: block;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: relative;
+  display: none;
 }
 .item {
   color: rgb(98, 82, 5);
@@ -389,24 +385,28 @@ body {
   .burger-menu {
     display: block;
   }
-  .nav,
-  .location,
+  #menu-burger ul {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+  }
+  .nav-item,
   .phone,
   .btn {
     display: none;
   }
-  .navigation-block {
-    justify-content: space-between;
-  }
 }
 @media (max-width: 1000px) {
-  .cards-holder {
+  .pictures-holder {
     display: block;
   }
-  .card {
+  .picture {
     width: 100%;
-    margin-top: 30px;
-    padding-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 10px;
   }
 }
 @media (max-width: 780px) {
@@ -441,7 +441,7 @@ body {
   align-items: stretch;
 }
 h2 {
-  color: rgb(236, 26, 26);
+  color: rgb(142, 13, 13);
 }
 .timer__item {
   position: relative;
@@ -464,7 +464,6 @@ h2 {
   transform: translateX(-50%);
   font-size: 1rem;
   font-weight: normal;
-  /* color: white; */
 }
 
 .timer__divider {
@@ -488,4 +487,3 @@ h2 {
     font-size: 4em;
   }
 }
-/* конец таймера */
